@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barber Booker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <button id="themeToggle" class="theme-btn">🌙</button>
+
+  <!-- Login Popup -->
+  <div class="popup-bg" id="popupBg">
+    <div class="popup">
+      <h2>Welcome to <span>Barber Booker</span></h2>
+      <input type="text" id="name" placeholder="Enter your Name" />
+      <select id="gender">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <input type="number" id="age" placeholder="Enter Age" />
+      <button id="saveProfile">Continue</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>💈 Barber Booker</h1>
+    <p>Find salons nearby, check prices, and book your time easily!</p>
+  </header>
+
+  <section class="map-section">
+    <h2>🌍 Select Location</h2>
+    <select id="locationSelect">
+      <option value="Delhi">Delhi</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Bangalore">Bangalore</option>
+      <option value="Chennai">Chennai</option>
+      <option value="Kolkata">Kolkata</option>
+    </select>
+    <button id="detectLocation">📍 Detect My Location</button>
+    <div id="mapContainer">
+      <iframe id="mapFrame" src="" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section class="salons" id="salonList">
+    <!-- Salon cards dynamically added -->
+  </section>
+
+  <div class="booking-popup" id="bookingPopup">
+    <div class="booking-content">
+      <h2>Book Appointment</h2>
+      <input type="date" id="bookDate" />
+      <input type="time" id="bookTime" />
+      <button id="confirmBooking">Confirm</button>
+      <button class="close-btn" id="closeBooking">Cancel</button>
+    </div>
+  </div>
+
+  <audio id="bookSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_bdc81a18cb.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
